@@ -24,7 +24,21 @@ for x in word:
 #break line
 print()
 
+#iterate through array within loop
 array = [1, 2, 3, 4, 5, 6, 6, 6, 8, 15]
 
 for x in array:
     print(x)
+
+#break line
+print()
+
+#adding logic to determine which elements are printed
+for x in array:
+    if (x % 2 == 0):
+        print(x)
+
+
+#break line
+print()
+
