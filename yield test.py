@@ -15,3 +15,15 @@ def rangeTest(max):
 
 for x in rangeTest(5):
     print(x)
+
+#while loop implementation
+#utilizing the while loop, I can simulate the range() function without calling it as in rangeTest()
+def whileRangeTest(max):
+    x = 0
+
+    while x < max:
+        yield x
+        x = x + 1
+
+for x in whileRangeTest(10):
+    print(x)
