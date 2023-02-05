@@ -18,12 +18,28 @@ for x in rangeTest(5):
 
 #while loop implementation
 #utilizing the while loop, I can simulate the range() function without calling it as in rangeTest()
-def whileRangeTest(max):
+# def whileRangeTest(max):
+#     x = 0
+
+#     while x < max:
+#         yield x
+#         x = x + 1
+
+#redefine whileRangeTest with multiple parameters
+def whileRangeTest(stop, start=None, step=None):
     x = 0
+    increment = 1
 
-    while x < max:
+    if (start != None):
+        x = start
+    
+    if (step != None):
+        increment = step
+
+    while x < stop:
         yield x
-        x = x + 1
+        x = x + increment
 
-for x in whileRangeTest(10):
+for x in whileRangeTest(10, 5):
     print(x)
+
