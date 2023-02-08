@@ -8,7 +8,19 @@
 # print("Employee's Gross Pay is: $" + str(format(grossWeekly, '.2f')))
 
 #multiple employee payroll
+#implementing Employee class
 employees = []
+
+class Employee:
+    #python constructor, self indicates this class similar to 'this'. Fields come after
+    def __init__(self, name, worked, pay):
+        self.name = name
+        self.hoursWorked = worked
+        self.payRate = pay
+    
+    #custom method, self is used to assign value to field within class
+    def setGross(self, gross):
+        self.grossPay = gross
 
 def payroll(hours, rate):
     return hours * rate
@@ -20,9 +32,16 @@ while len(employees) < employeeCount:
     hoursWorked = float(input("Enter hours worked: "))
     payRate = float(input("Enter hourly pay rate: "))
 
-    gross = payroll(hoursWorked, payRate)
+    #creates new instance of object
+    empl = Employee(name, hoursWorked, payRate)
 
-    employees.append([name, gross])
+    #calls object method
+    empl.setGross(payroll(empl.hoursWorked, empl.payRate))
 
-for x in range(len(employees)):
-    print(employees[x][0] + ": $" + str(format(employees[x][1], '.2f')))
+    employees.append(empl)
+
+# for x in range(len(employees)):
+#     print(employees[x][0] + ": $" + str(format(employees[x][1], '.2f')))
+
+for empl in employees:
+    print(empl.name + ": $" + str(format(empl.grossPay, '.2f')))
