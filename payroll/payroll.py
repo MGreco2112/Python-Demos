@@ -21,4 +21,4 @@ while len(employees) < employeeCount:
     employees.append(empl)
 
 for empl in employees:
-    print(f"{empl.name}: ${empl.grossPay:.2f}")
+    print(f"{empl.name}: ${empl.grossPay:,.2f}")
