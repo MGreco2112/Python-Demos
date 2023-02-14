@@ -6,7 +6,7 @@ import time
 #set background color to gray
 turtle.bgcolor("gray")
 
-# #Compass Drawing
+#Compass Drawing
 
 #lift pen
 turtle.penup()
@@ -130,15 +130,15 @@ for x in range(3):
     turtle.circle(50)
     #lift pen
     turtle.penup()
-    #move turtle forward 100px
+    #move turtle forward 150px
     turtle.forward(150)
 #turn turtle facing West
 turtle.setheading(180)
 #save current location in turtlePosition variable
 turtlePosition = turtle.pos()
-#increase x axis position by 20px
+#increase x axis position by 50px
 turtle.goto(turtlePosition[0], turtlePosition[1] + 50)
-#move turtle 200 px, between two rings
+#move turtle 225 px, between two rings
 turtle.forward(225)
 for x in range(2):
     #drop pen
@@ -149,6 +149,45 @@ for x in range(2):
     turtle.penup()
     #move forward 225px
     turtle.forward(150)
+
+#wait before moving to next drawing
+time.sleep(2)
+
+#clear drawing, pen and fill settings, and reset turtle location, but not background color
+turtle.reset()
+
+#Double Triangle
+
+#lift pen
+turtle.penup()
+#move turtle to position 0 x 200
+turtle.goto(0, 200)
+#drop pen
+turtle.pendown()
+#move turtle to position -100 x 0
+turtle.goto(-100, 0)
+#move turtle to position  100 x 0
+turtle.goto(100, 0)
+#move turtle to position 0 x 200
+turtle.goto(0, 200)
+#lift pen
+turtle.penup()
+#move turtle to position 0 x 100
+turtle.goto(0,100)
+#change fill color to white
+turtle.fillcolor("white")
+#pen down
+turtle.pendown()
+#start fill
+turtle.begin_fill()
+#move to position -100 x 0
+turtle.goto(-100, 0)
+#move turtle to positioon 100 x 0
+turtle.goto(100, 0)
+#move turtle to position 0 x 100
+turtle.goto(0, 100)
+#end fill
+turtle.end_fill()
 
 #wait before moving to next drawing
 time.sleep(2)
