@@ -3,9 +3,11 @@ import turtle
 #import Time module for waiting
 import time
 
-#Compass Drawing
-#set background color to blue
+#set background color to gray
 turtle.bgcolor("gray")
+
+# #Compass Drawing
+
 #lift pen
 turtle.penup()
 #move turtle to position 0 x 400 px
@@ -114,6 +116,46 @@ time.sleep(2)
 
 #clear screen and reset turtle position, keeps background color
 turtle.reset()
+
+#Olympic Rings
+
+#lift pen
+turtle.penup()
+#move Turtle to -200 x 50 px
+turtle.goto(-200, 50)
+for x in range(3):
+    #drop pen
+    turtle.pendown()
+    #draw circle of dia 50px
+    turtle.circle(50)
+    #lift pen
+    turtle.penup()
+    #move turtle forward 100px
+    turtle.forward(150)
+#turn turtle facing West
+turtle.setheading(180)
+#save current location in turtlePosition variable
+turtlePosition = turtle.pos()
+#increase x axis position by 20px
+turtle.goto(turtlePosition[0], turtlePosition[1] + 50)
+#move turtle 200 px, between two rings
+turtle.forward(225)
+for x in range(2):
+    #drop pen
+    turtle.pendown()
+    #draw circle
+    turtle.circle(50)
+    #lift pen
+    turtle.penup()
+    #move forward 225px
+    turtle.forward(150)
+
+#wait before moving to next drawing
+time.sleep(2)
+
+#clear drawing, pen and fill settings, and reset turtle location, but not background color
+turtle.reset()
+
 
 #keep window open after reaching last line
 turtle.done()
