@@ -195,6 +195,200 @@ time.sleep(2)
 #clear drawing, pen and fill settings, and reset turtle location, but not background color
 turtle.reset()
 
+#square with dashes and points
+
+#lift pen
+turtle.penup()
+#move turtle to position 200 x 200
+turtle.goto(200, 200)
+#pen down
+turtle.pendown()
+#make dot
+turtle.dot()
+#move turtle to 0 x 0
+turtle.goto(0, 0)
+#make dot
+turtle.dot()
+#move turtle to position -200 x -200
+turtle.goto(-200, -200)
+#make dot
+turtle.dot()
+#move turtle to -200 x 200
+turtle.goto(-200, 200)
+#make dot
+turtle.dot()
+#move turlte to 200 x -200
+turtle.goto(200, -200)
+#make dot
+turtle.dot()
+#set heading to 180
+turtle.setheading(180)
+#move turtle forward by 25px
+turtle.forward(25)
+#lift pen
+turtle.penup()
+#move turtle forward by 50px
+turtle.forward(75)
+#drop pen
+turtle.pendown()
+#move turtle ahead 50px
+turtle.forward(75)
+#lift pen
+turtle.penup()
+#move tutle forward 50px
+turtle.forward(75)
+#drop pen
+turtle.pendown()
+#move turtle ahead 50px
+turtle.forward(75)
+#lift pen
+turtle.penup()
+#move tutle forward 50px
+turtle.forward(45)
+#drop pen
+turtle.pendown()
+#move turtle to -200 x -200
+turtle.goto(-200, -200)
+#lift pen
+turtle.penup()
+#move turtle to -200 x 200
+turtle.goto(-200, 200)
+#set heading East
+turtle.setheading(0)
+#drop pen
+turtle.pendown()
+#move turtle forward by 25px
+turtle.forward(25)
+#lift pen
+turtle.penup()
+#move turtle forward by 50px
+turtle.forward(75)
+#drop pen
+turtle.pendown()
+#move turtle ahead 50px
+turtle.forward(75)
+#lift pen
+turtle.penup()
+#move tutle forward 50px
+turtle.forward(75)
+#drop pen
+turtle.pendown()
+#move turtle ahead 50px
+turtle.forward(75)
+#lift pen
+turtle.penup()
+#move tutle forward 50px
+turtle.forward(45)
+#drop pen
+turtle.pendown()
+#move turtle to 200 x 200
+turtle.goto(200, 200)
+#move turtle to 200 x -200
+turtle.goto(200, -200)
+
+#wait before moving to next drawing
+time.sleep(2)
+
+#clear drawing, pen and fill settings, and reset turtle location, but not background color
+turtle.reset()
+
+#three dimensional rectangle
+
+#first square coordinate variables
+firstUpperLeft = 0
+firstUpperRight = 0
+firstBottomLeft = 0
+firstBottomRight = 0
+
+#secord square coordinate variables
+secondUpperLeft = 0
+secondUpperRight = 0
+secondBottomLeft = 0
+secondBottomRight = 0
+
+#lift pen
+turtle.penup()
+#move turtle to 0 x 200
+turtle.goto(100, 0)
+#set firstUpperLeft to position
+firstUpperLeft = turtle.pos()
+#drop pen
+turtle.pendown()
+#set heading East
+turtle.setheading(0)
+#move turtle forward 100px
+turtle.forward(100)
+#set firstUpperRight to position
+firstUpperRight = turtle.pos()
+#set heading to South
+turtle.setheading(270)
+#move turtle 100px forward
+turtle.forward(100)
+#set firstBottomRight to position
+firstBottomRight = turtle.pos()
+#set heading West
+turtle.setheading(180)
+#move forward 100px
+turtle.forward(100)
+#set firstBottomLeft to position
+firstBottomLeft = turtle.pos()
+#move turtle to 0 x 200
+turtle.goto(100, 0)
+#set secondBottomRight to position
+secondBottomRight = turtle.pos()
+#set heading north
+turtle.setheading(90)
+#move turtle forward 100px
+turtle.forward(100)
+#set secondUpperRight to position
+secondUpperRight = turtle.pos()
+#set heading West
+turtle.setheading(180)
+#move turtle forward 100px
+turtle.forward(100)
+#set secondUpperLeft to position
+secondUpperLeft = turtle.pos()
+#set heading south
+turtle.setheading(270)
+#move turtle forward 100px
+turtle.forward(100)
+#set secondBottomLeft to position
+secondBottomLeft = turtle.pos()
+#set heading East
+turtle.setheading(0)
+#move turtle forward 100px
+turtle.forward(100)
+#lift pen
+turtle.penup()
+#move turtle to firstBottomLeft
+turtle.goto(firstBottomLeft)
+#drop pen
+turtle.pendown()
+#move turtle to secondBottomLeft
+turtle.goto(secondBottomLeft)
+#lift pen
+turtle.penup()
+#move turtle to secondUpperLeft
+turtle.goto(secondUpperLeft)
+#drop pen
+turtle.pendown()
+#move turtle to firstUpperLeft
+turtle.goto(firstUpperLeft)
+#lift pen
+turtle.penup()
+#move turtle to firstUpperRight
+turtle.goto(firstUpperRight)
+#drop pen
+turtle.pendown()
+#move turtle to secondUpperRight
+turtle.goto(secondUpperRight)
+#lift pen
+turtle.penup()
+#move turtle to secondBottomRight
+turtle.goto(secondBottomRight)
+#drop pen
+turtle.pendown()
+turtle.goto(firstBottomRight)
 
 #keep window open after reaching last line
 turtle.done()
