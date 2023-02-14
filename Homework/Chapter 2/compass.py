@@ -58,7 +58,7 @@ turtle.write("EAST")
 turtle.goto(0,0)
 
 #wait before moving to next drawing
-time.sleep(3)
+time.sleep(2)
 
 #clear drawing, pen and fill settings, and reset turtle location, but not background color
 turtle.reset()
@@ -109,8 +109,8 @@ for x in range(4):
 #fill in shape
 turtle.end_fill()
 
-#wait three seconds before drawing next piece
-time.sleep(3)
+#wait two seconds before drawing next piece
+time.sleep(2)
 
 #clear screen and reset turtle position, keeps background color
 turtle.reset()
