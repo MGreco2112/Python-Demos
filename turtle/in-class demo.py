@@ -71,6 +71,14 @@ for x in range(3):
     turtle.left(90)
     turtle.forward(math.sqrt(sqrt))
 
-
+turtle.left(45)
+turtle.forward(50)
+turtle.left(90)
+turtle.forward(50)
+turtle.circle(50)
+turtle.forward(50)
+turtle.left(45)
+sqrt = 100**2 + 100**2
+turtle.circle(math.sqrt(sqrt) / 2)
 
 turtle.done()
