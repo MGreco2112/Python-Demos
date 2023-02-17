@@ -72,15 +72,5 @@ for x in range(3):
     turtle.forward(math.sqrt(sqrt))
 
 
-# turtle.right(135)
-# turtle.forward(50)
-# turtle.right(135)
-
-# turtle.forward(math.sqrt(sqrt) / 4)
-# turtle.right(85)
-# turtle.circle(50)
-
-
-
 
 turtle.done()
