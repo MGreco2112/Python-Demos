@@ -3,7 +3,7 @@ if __name__ == '__main__':
     N = int(input())
     
     for query in range(N):
-        print(query)
+        # print(query)
         queryString = input()
         
         firstCharacter = queryString[0]
@@ -11,11 +11,7 @@ if __name__ == '__main__':
         if (firstCharacter == "i"):
             index = int(queryString[7])
             
-            if (len(array) >= index):
-                # TODO fix the substring call so errors are not thrown
-                array.append(int(queryString[9:len(queryString)]))
-            else:
-                array[index] = int(queryString[9:len(queryString)])
+            array.insert(index, int(queryString[9:len(queryString)]))
             
         elif (firstCharacter == "p"):
             if (queryString[1] == "r"):
