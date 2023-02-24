@@ -2,14 +2,18 @@ from employee import Employee
 
 def payroll(hours, rate):
 
-    if hours > 40:
+    REGULAR_HOUR_LIMIT = 40
+
+    if hours > REGULAR_HOUR_LIMIT:
         output = 0.0
 
-        overtime_hours = hours % 40
+        OVERTIME_RATE = 1.5
+
+        overtime_hours = hours % REGULAR_HOUR_LIMIT
         regular_hours = hours - overtime_hours
 
         output = regular_hours * rate
-        output += overtime_hours * (rate * 1.5)
+        output += overtime_hours * (rate * OVERTIME_RATE)
 
         return output
 
