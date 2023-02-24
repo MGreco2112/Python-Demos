@@ -6,5 +6,5 @@ if (weather == "True"):
     print("Wear a coat.")
     print("Wear a hat.")
     print("Wear gloves.")
-else:
-    print("Go Swimming!")
+
+print("Go Swimming!")
