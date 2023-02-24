@@ -1,11 +1,11 @@
 #if else control flow in class demonstration
 
-# weather = input("Is it cold outside? True or False: ")
-weather = True
+temperature_farenheit = int(input("Enter the temperature in Farenheit: "))
 
-if (weather):
+
+if temperature_farenheit < 60:
     print("Wear a coat.")
     print("Wear a hat.")
     print("Wear gloves.")
-
-print("Go Swimming!")
+else:
+    print("Go Swimming!")
