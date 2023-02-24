@@ -1,7 +1,21 @@
 from employee import Employee
 
 def payroll(hours, rate):
-    return hours * rate
+
+    if hours > 40:
+        output = 0.0
+
+        overtime_hours = hours % 40
+        regular_hours = hours - overtime_hours
+
+        output = regular_hours * rate
+        output += overtime_hours * (rate * 1.5)
+
+        return output
+
+    else:
+        return hours * rate
+
 
 employees = []
 
@@ -15,8 +29,11 @@ while len(employees) < employeeCount:
     #creates new instance of object
     empl = Employee(name, hoursWorked, payRate)
 
+    #calculates hours worked times hourly rate, stores in gross
+    gross = payroll(empl.hoursWorked, empl.payRate)
+
     #calls object method
-    empl.setGross(payroll(empl.hoursWorked, empl.payRate))
+    empl.setGross(gross)
 
     employees.append(empl)
 
