@@ -57,9 +57,24 @@ turtle.forward(distance) #move turtle forward calculated distance
 
 #check for success
 if turtle.xcor() >= TARGET_LLEFT_X and turtle.xcor() <= (TARGET_LLEFT_X + TARGET_WIDTH) and turtle.ycor() >= TARGET_LLEFT_Y and turtle.ycor() <= (TARGET_LLEFT_Y + TARGET_WIDTH):
-    print("Target hit!")
+    turtle.write("Target hit!!!")
+    turtle.penup()
+    turtle.goto(0,0)
 else:
-    print("missed the target")
+    
+    if turtle.xcor() < TARGET_LLEFT_X:
+        turtle.write("Try decreasing the angle.")
+    elif turtle.ycor() >= TARGET_LLEFT_X:
+        turtle.write("Try increasing the angle.")
+    
+    if turtle.pos()[0] < (TARGET_LLEFT_X + TARGET_WIDTH) and turtle.pos()[1] < (TARGET_LLEFT_Y + TARGET_WIDTH):
+        turtle.penup()
+        turtle.goto(0,0)
+        turtle.write("Try increasing the force.")
+    elif turtle.pos()[0] > (TARGET_LLEFT_X) or turtle.pos()[1] > (TARGET_LLEFT_Y):
+        turtle.penup()
+        turtle.goto(0,0)
+        turtle.write("Try decreasing the force.") 
 
 
 turtle.done() #leave turtle window open once animation finishes
