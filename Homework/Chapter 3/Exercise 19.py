@@ -56,25 +56,30 @@ turtle.pendown() #drop pen
 turtle.forward(distance) #move turtle forward calculated distance
 
 #check for success
+
+#if current turtle x coordinate larger or equal to target lower left x and less or equal to target lower left x + width of target and
+#turtle y coordiante greater or equal to target lower left y and less or equal to lower left y plus target width
+#then a hit is successfully registered
 if turtle.xcor() >= TARGET_LLEFT_X and turtle.xcor() <= (TARGET_LLEFT_X + TARGET_WIDTH) and turtle.ycor() >= TARGET_LLEFT_Y and turtle.ycor() <= (TARGET_LLEFT_Y + TARGET_WIDTH):
-    turtle.write("Target hit!!!")
-    turtle.penup()
-    turtle.goto(0,0)
-else:
+    turtle.write("Target hit!!!") #turtle writes Target hit
+    turtle.penup() #lift pen
+    turtle.goto(0,0) #return to position 0 x 0 px
+else: #if hit not registered
     
-    if turtle.xcor() < TARGET_LLEFT_X:
-        turtle.write("Try decreasing the angle.")
-    elif turtle.ycor() >= TARGET_LLEFT_X:
-        turtle.write("Try increasing the angle.")
+    if turtle.xcor() < TARGET_LLEFT_X: #if turtle's x coordinate less than target's lower left x coordinate
+        turtle.write("Try decreasing the angle.") #turtle writes the decrease angle hit
+    elif turtle.ycor() >= TARGET_LLEFT_X: #if y coordinate is greater than target's lower left x
+        turtle.write("Try increasing the angle.") #turtle writes increase angle hint
     
-    if turtle.pos()[0] < (TARGET_LLEFT_X + TARGET_WIDTH) and turtle.pos()[1] < (TARGET_LLEFT_Y + TARGET_WIDTH):
-        turtle.penup()
-        turtle.goto(0,0)
-        turtle.write("Try increasing the force.")
-    elif turtle.pos()[0] > (TARGET_LLEFT_X) or turtle.pos()[1] > (TARGET_LLEFT_Y):
-        turtle.penup()
-        turtle.goto(0,0)
-        turtle.write("Try decreasing the force.") 
+    if turtle.pos()[0] < (TARGET_LLEFT_X + TARGET_WIDTH) and turtle.pos()[1] < (TARGET_LLEFT_Y + TARGET_WIDTH): #if turtle's x coordinate is less than target hitbox
+        turtle.penup() #lift pen
+        turtle.goto(0,0) #return to position 0 x 0 px
+        turtle.write("Try increasing the force.") #write increase force hint
+
+    elif turtle.pos()[0] > (TARGET_LLEFT_X) or turtle.pos()[1] > (TARGET_LLEFT_Y): #if turtle's x coordinate greater than target's lower left axis or greater than target's lower right axis
+        turtle.penup() #lift pen
+        turtle.goto(0,0) #return to position 0 x 0 px
+        turtle.write("Try decreasing the force.") #print increase force hint
 
 
 turtle.done() #leave turtle window open once animation finishes
