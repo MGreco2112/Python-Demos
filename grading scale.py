@@ -33,15 +33,17 @@ else: #otherwise print F grade
 
 #refactor using elif
 
-# grade = float(input("Enter your current grade: "))
+#take input from user, parse as float
+grade = float(input("Enter your current grade: "))
 
-# if grade >= A_START_RANGE:
-#     print("A")
-# elif grade >= B_START_RANGE:
-#     print("B")
-# elif grade >= C_START_RANGE:
-#     print("C")
-# elif grade >= D_START_RANGE:
-#     print("D")
-# else:
-#     print("F")
+#if grade within A Range
+if grade >= A_START_RANGE:
+    print("A") #print grade
+elif grade >= B_START_RANGE: #else if grade within B Range
+    print("B") #print grade
+elif grade >= C_START_RANGE: #else if grade within C Range
+    print("C") #print grade
+elif grade >= D_START_RANGE: #else if grade within D Range
+    print("D") #print grade
+else: #else
+    print("F") #print grade
