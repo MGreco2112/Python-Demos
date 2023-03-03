@@ -33,17 +33,40 @@ D_START_RANGE = 60
 
 #refactor using elif
 
+# #take input from user, parse as float
+# grade = float(input("Enter your current grade: "))
+
+# #if grade within A Range
+# if grade >= A_START_RANGE:
+#     print("A") #print grade
+# elif grade >= B_START_RANGE: #else if grade within B Range
+#     print("B") #print grade
+# elif grade >= C_START_RANGE: #else if grade within C Range
+#     print("C") #print grade
+# elif grade >= D_START_RANGE: #else if grade within D Range
+#     print("D") #print grade
+# else: #else
+#     print("F") #print grade
+
+#check for grades in specific ranges in a specific order
+
+#order for conditions:
+    #C
+    #A
+    #B
+    #F
+    #D
+
 #take input from user, parse as float
 grade = float(input("Enter your current grade: "))
 
-#if grade within A Range
-if grade >= A_START_RANGE:
-    print("A") #print grade
-elif grade >= B_START_RANGE: #else if grade within B Range
-    print("B") #print grade
-elif grade >= C_START_RANGE: #else if grade within C Range
+if grade >= C_START_RANGE and grade < B_START_RANGE: #check grade against the start of C_START RANGE until less than B_START_RANGE
     print("C") #print grade
-elif grade >= D_START_RANGE: #else if grade within D Range
-    print("D") #print grade
-else: #else
+elif grade >= A_START_RANGE: #check grade against the start of A_START RANGE
+    print("A") #print grade
+elif grade >= B_START_RANGE and grade < A_START_RANGE: #check grade against the start of B_START RANGE until less than A_START_RANGE
+    print("B") #print grade
+elif grade < D_START_RANGE: #check grade against the start of D_START RANGE and if less
     print("F") #print grade
+else: #otherwise
+    print("D") #print grade
