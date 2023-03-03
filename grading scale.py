@@ -7,7 +7,7 @@
     #60+ = D
     #< 60 = F
 
-#declair constants
+#declare constants
 A_START_RANGE = 90
 B_START_RANGE = 80
 C_START_RANGE = 70
