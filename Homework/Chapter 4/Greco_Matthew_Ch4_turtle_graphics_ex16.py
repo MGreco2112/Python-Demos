@@ -2,24 +2,30 @@
 
 import turtle
 
-DRAW_SPEED = 8
-SQUARE_GAP = 10
-INITIAL_LENGTH = 10
+SQUARE_COUNT = 150
+DRAW_SPEED = 0
+SQUARE_GAP = 5
+length = 5
 NORTH = 90
 SOUTH = 270
 WEST = 180
 EAST = 0
-x = 700
-y = -650
+x_cor = 370
+Y_COR = -315
 
-turtle.penup()
-turtle.goto(x, y)
+turtle.speed(DRAW_SPEED)
 
-turtle.pendown()
-turtle.setheading(NORTH)
-turtle.forward(INITIAL_LENGTH)
-turtle.setheading(0)
-turtle.forward(INITIAL_LENGTH)
+for x in range(SQUARE_COUNT):
+    turtle.penup()
+    turtle.goto(x_cor, Y_COR)
+    turtle.pendown()
+    turtle.setheading(NORTH)
+    turtle.forward(length)
+    turtle.setheading(0)
+    turtle.forward(length)
+    x_cor -= SQUARE_GAP
+    length += SQUARE_GAP
+
 
 
 turtle.done()
