@@ -26,7 +26,7 @@ def take_grades():
     for score_number in range(1, NUMBER_OF_SCORES + 1):
         #add the score passed via input, cast as float, to the total grades variable
         #the prompt details what current score number out of total score numbers is being requested
-        total_grades += float(input(f"Enter grade number {score_number} of {NUMBER_OF_GRADES} grades: "))
+        total_grades += float(input(f"Enter grade number {score_number} of {NUMBER_OF_SCORES} grades: "))
 
     #return the added total of grades. Control passes back to main function
     return total_grades
