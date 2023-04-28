@@ -65,7 +65,15 @@ def draw_base():
     turtle.circle(75)
 
 def draw_mid_section():
-    pass
+    #lift pen
+    turtle.penup()
+    #set heading east
+    turtle.setheading(EAST)
+    #drop pen
+    turtle.pendown()
+    #draw circle of rad
+    turtle.circle(50)
+
 def draw_arms():
     pass
 def draw_head():
