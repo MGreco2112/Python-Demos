@@ -49,11 +49,11 @@ def main():
     #call draw hat function
     draw_hat()
 
-    #define for loop in range of 0, 3 for number of buttons
-    for button in range(BUTTON_COUNT):
-        #call draw button function
-        draw_button()
+    #call draw buttons function
+    draw_buttons()
     
+    #hide turtle
+    turtle.hideturtle()
     #call turtle done function to keep turtle window open
     turtle.done()
 
@@ -279,9 +279,101 @@ def draw_pipe():
 
 
 def draw_hat():
-    pass
-def draw_button():
-    pass
+    #drop pen
+    turtle.pendown()
+    #set heading east
+    turtle.setheading(EAST)
+    #start fill
+    turtle.begin_fill()
+    #move turtle forward
+    turtle.forward(50)
+    #set heading north
+    turtle.setheading(NORTH)
+    #move turtle forward
+    turtle.forward(10)
+    #set heading west
+    turtle.setheading(WEST)
+    #move turtle forward
+    turtle.forward(25)
+    #set heading north
+    turtle.setheading(NORTH)
+    #move turtle forward
+    turtle.forward(25)
+    #set heading west
+    turtle.setheading(WEST)
+    #move turtle forward
+    turtle.forward(50)
+    #set heading south
+    turtle.setheading(SOUTH)
+    #move turtle forward
+    turtle.forward(25)
+    #set heading west
+    turtle.setheading(WEST)
+    #move forward
+    turtle.forward(25)
+    #set heading south
+    turtle.setheading(SOUTH)
+    #move turtle forward
+    turtle.forward(10)
+    #set heading east
+    turtle.setheading(EAST)
+    #move turtle forward
+    turtle.forward(50)
+    #end fill
+    turtle.end_fill()
+    #lift pen
+    turtle.penup()
+    #move turtle to start of circle c
+    turtle.setheading(SOUTH)
+    circle_c_start = (CIRCLE_RAD_C * 2) - 10
+    turtle.forward(circle_c_start)
+
+
+
+def draw_buttons():
+    #set fill color red and color to blue
+    turtle.color("blue")
+    turtle.fillcolor("red")
+    #define for loop running from 0 to 1
+    for button in range(2):
+        #move turtle forward
+        turtle.forward(25)
+        #drop pen
+        turtle.pendown()
+        #begin fill
+        turtle.begin_fill()
+        #set heading west
+        turtle.setheading(WEST)
+        #draw circle
+        turtle.circle(5)
+        #end fill
+        turtle.end_fill()
+        #pen up
+        turtle.penup()
+        #set heading south
+        turtle.setheading(SOUTH)
+    
+    #move turtle forward
+    turtle.forward(55)
+    #iterate through 0 to 2 to draw three remaining buttons
+    for button in range(3):
+        #move turtle forward
+        turtle.forward(25)
+        #drop pen
+        turtle.pendown()
+        #begin fill
+        turtle.begin_fill()
+        #set heading west
+        turtle.setheading(WEST)
+        #draw circle
+        turtle.circle(5)
+        #end fill
+        turtle.end_fill()
+        #pen up
+        turtle.penup()
+        #set heading south
+        turtle.setheading(SOUTH)
+    
 
 #call main function
 main()
